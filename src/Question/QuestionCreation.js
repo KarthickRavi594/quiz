@@ -4,11 +4,17 @@ class QuestionCreation extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: questionAlign()
+            data: questionAlign(),
+            name : '',
+            value : ''
         }
         console.log(this.state.data);
+        this.handleEvent = this.handleEvent.bind(this);
     }
-
+    handleEvent(target) {
+        this.setState({ [target.name]: target.value });
+        console.log(this.state);
+    }
     render() {
         return (
             <div className="container-fluid">
@@ -24,23 +30,19 @@ class QuestionCreation extends React.Component {
                             <button className="btn btn-info btn-block mb-4" id="tas1">Get Start Now</button>
                         </div>
                     </div>
-                    {this.state.data.map((item,id) => (
-                        <div className="row text-white text-center pb-xl-1">
+                    {this.state.data.map((item, id) => (
+                        <div key={id} className="row text-white text-center pb-xl-1">
                             <div className="col-md-10 offset-md-1">
                                 <h3 className=" text-white pt-xl-1">{item.question}</h3>
-                                {item.options.map((options,index) => ( 
-                                    <div className="custom-control custom-radio">
-                                        <input type="radio" className="custom-control-input" name={"groupOfDefaultRadios"+id+""+index} />
-                                        <label className="custom-control-label">{options.option}</label>
+                                {item.options.map((options, index) => (
+                                    <div className="custom-control custom-radio" key={"" + id + "" + index}>
+                                        <input type="radio"  id={"defaultGroupExample" + id + "" + index} className="custom-control-input" name="groupOfDefaultRadios" value={"groupOfDefaultRadios" + id + "" + index}/>
+                                        <label className="custom-control-label" htmlFor={"defaultGroupExample" + id + "" + index}>{options.option}</label>
                                     </div>))}
                             </div>
                         </div>
                     ))}
-
-
-
                 </div>
-
             </div>
         )
     }
