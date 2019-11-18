@@ -20,3 +20,10 @@
 .App-link {
   color: #09d3ac;
 }
+.bg {
+  background-color: #777;   
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

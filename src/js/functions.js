@@ -58,7 +58,7 @@ function QuestionCreate(questionArray){
         })
     })
 }
-console.log('Easy Questions List ->', easyQuestionList);
-console.log('Medium Questions List->', mediumQuestionList);
-console.log('Hard Questions List->', hardQuestionList);
-console.log('Questions -> ',questionCreated);
+// console.log('Easy Questions List ->', easyQuestionList);
+// console.log('Medium Questions List->', mediumQuestionList);
+// console.log('Hard Questions List->', hardQuestionList);
+// console.log('Questions -> ',questionCreated);
