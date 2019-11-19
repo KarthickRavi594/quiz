@@ -176,7 +176,7 @@
             {
                 "id": 0,
                 "option": "25 years",
-                "isCorrect": true
+                "isCorrect": false
             },
             {
                 "id": 1,
@@ -191,7 +191,7 @@
             {
                 "id": 3,
                 "option": "18 years",
-                "isCorrect": false
+                "isCorrect": true
             }
         ]
     },
@@ -461,7 +461,7 @@
             {
                 "id": 1,
                 "option": "Graphite",
-                "isCorrect": false
+                "isCorrect": true
             },
             {
                 "id": 2,

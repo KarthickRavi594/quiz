@@ -53,12 +53,32 @@ function QuestionCreate(questionArray){
     questionArray.find(x=> {
         Questions.find(quest => {
             if(quest.index === x){
-                questionCreated.push(quest);
+                return questionCreated.push(quest);
             }
         })
     })
 }
-// console.log('Easy Questions List ->', easyQuestionList);
-// console.log('Medium Questions List->', mediumQuestionList);
-// console.log('Hard Questions List->', hardQuestionList);
-// console.log('Questions -> ',questionCreated);
+
+export function CalculateAnswer(UserObject){
+    let currentScore = 0;
+    console.log('Answers -> ',UserObject);
+
+    for(let i =0;i<questionCreated.length;i++){
+        questionCreated.find(x=>{
+            if(x.question === UserObject.answer.name[i]){
+                x.options.find(optionValue => {
+                    if(optionValue.isCorrect === true){
+                        if(optionValue.option === UserObject.answer.value[i]){
+                            currentScore = currentScore + 3;
+                        }
+                        else{
+                            currentScore = currentScore - 1;
+                        }
+                    }
+                })
+            }
+        })
+    }
+    console.log('User Scored -> ',currentScore)
+    return currentScore;
+}
