@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import QuestionCreation from './Question/QuestionCreation'
+import SecondFile from './SecondFile'
 function App() {
   return (
     <div className="App">
@@ -18,7 +19,8 @@ function App() {
         >
           Learn React
         </a> */}
-        <QuestionCreation />
+        {/* <QuestionCreation /> */}
+        <SecondFile />
       {/* </header> */}
     </div>
   );

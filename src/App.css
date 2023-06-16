@@ -27,3 +27,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+input {
+  margin: 2%;
+}
